@@ -1,1 +1,284 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioFios | Produtos Capilares</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fcf9f5;
+            color: #333;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #fff;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #8d5b4c;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #8d5b4c;
+        }
+
+        /* Banner Principal */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3') center/cover;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            max-width: 600px;
+        }
+
+        .btn-cta {
+            background-color: #8d5b4c;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-cta:hover {
+            background-color: #71463a;
+        }
+
+        /* Seção de Produtos */
+        .produtos-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .titulo-secao {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #4a322b;
+            font-size: 28px;
+        }
+
+        .grid-produtos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card-produto {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-produto:hover {
+            transform: translateY(-5px);
+        }
+
+        .img-produto {
+            width: 100%;
+            height: 250px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-size: 14px;
+            /* Usando cores sólidas estéticas como placeholder para os produtos */
+            background: linear-gradient(135deg, #e8dbc5 0%, #d4bfa2 100%);
+        }
+
+        .info-produto {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .categoria {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #999;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .nome-produto {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .preco {
+            font-size: 20px;
+            color: #8d5b4c;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .btn-comprar {
+            background-color: #4a322b;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .btn-comprar:hover {
+            background-color: #33221d;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #4a322b;
+            color: #fcf9f5;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">BioFios</div>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Produtos</a>
+            <a href="#">Tratamentos</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Sua rotina de cuidados capilares</h1>
+        <p>Descubra fórmulas exclusivas criadas para dar vida, brilho e saúde aos seus fios de forma natural.</p>
+        <a href="#" class="btn-cta">Ver Catálogo</a>
+    </section>
+
+    <main class="produtos-container">
+        <h2 class="titulo-secao">Nossos Queridinhos</h2>
+        
+        <div class="grid-produtos">
+            
+            <div class="card-produto">
+                <div class="img-produto">Shampoo Hidratante</div>
+                <div class="info-produto">
+                    <div>
+                        <p class="categoria">Hidratação</p>
+                        <h3 class="nome-produto">Shampoo Nutrição Intensa</h3>
+                    </div>
+                    <div>
+                        <p class="preco">R$ 45,90</p>
+                        <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-produto">
+                <div class="img-produto" style="background: linear-gradient(135deg, #d2e4d6 0%, #b3cbb9 100%);">Máscara Capilar</div>
+                <div class="info-produto">
+                    <div>
+                        <p class="categoria">Reconstrução</p>
+                        <h3 class="nome-produto">Máscara Reconstrutora de Queratina</h3>
+                    </div>
+                    <div>
+                        <p class="preco">R$ 62,00</p>
+                        <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-produto">
+                <div class="img-produto" style="background: linear-gradient(135deg, #f3d1c9 0%, #dfb2a7 100%);">Óleo Reparador</div>
+                <div class="info-produto">
+                    <div>
+                        <p class="categoria">Finalização</p>
+                        <h3 class="nome-produto">Óleo de Argan e Rícino 60ml</h3>
+                    </div>
+                    <div>
+                        <p class="preco">R$ 39,90</p>
+                        <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-produto">
+                <div class="img-produto" style="background: linear-gradient(135deg, #e3d2e4 0%, #caadd0 100%);">Ativador de Cachos</div>
+                <div class="info-produto">
+                    <div>
+                        <p class="categoria">Cachos e Crespos</p>
+                        <h3 class="nome-produto">Creme Ativador de Cachos Definidos</h3>
+                    </div>
+                    <div>
+                        <p class="preco">R$ 49,90</p>
+                        <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BioFios Cosméticos. Todos os direitos reservados.</p>
+        <p style="margin-top: 5px; color: #bca096; font-size: 12px;">Criado para amantes do autocuidado.</p>
+    </footer>
+
+</body>
+</html>
